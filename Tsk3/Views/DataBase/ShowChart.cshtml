@@ -1,0 +1,121 @@
+﻿@model IEnumerable<Tsk3.Models.DataBaseItem>
+@{
+    ViewData["Title"] = "График данных";
+}
+
+<h2 class="text-center text-white my-4">Визуализация данных</h2>
+
+<div class="container">
+    <div class="card shadow p-4 mb-5">
+        <div class="card-body">
+            
+            <h5 class="card-title text-muted mb-3">Параметры графика</h5>
+
+            <form method="get" asp-action="ShowChart">
+    <div class="card p-3 mb-4">
+        
+        
+        <div class="row align-items-end">
+            
+            <!-- Поле Датчик -->
+            <div class="col-md">
+                <label class="form-label">Датчик</label>
+                <input type="text" name="sensorName" value="@ViewBag.SensorName" class="form-control" placeholder="Название">
+            </div>
+
+            <!-- Поле Тип данных -->
+            <div class="col-md">
+                <label class="form-label">Тип данных</label>
+                <input type="text" name="dataType" value="@ViewBag.DataType" class="form-control" placeholder="Тип">
+            </div>
+
+            <!-- Поле Позиция -->
+            <div class="col-md">
+                <label class="form-label">Позиция</label>
+                <input type="text" name="position" value="@ViewBag.Position" class="form-control" placeholder="№">
+            </div>
+
+            <!-- Поле Дата С -->
+            <div class="col-md">
+                <label class="form-label">С (дата)</label>
+                <!-- Обратите внимание: type="date" -->
+                <input type="date" name="startDate" value="@ViewBag.StartDate" class="form-control">
+            </div>
+
+            <!-- Поле Дата По -->
+            <div class="col-md">
+                <label class="form-label">По (дата)</label>
+                <input type="date" name="endDate" value="@ViewBag.EndDate" class="form-control">
+            </div>
+
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12 text-end">
+                <a href="@Url.Action("ShowChart")" class="btn btn-secondary me-2">Сброс</a>
+                <button type="submit" class="btn btn-primary">Построить</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+            <hr class="my-4" />
+
+            @if (Model != null && Model.Any() && !string.IsNullOrEmpty(ViewBag.DataType as string))
+            {
+                <div id="chart_div" style="width: 100%; height: 500px;"></div>
+            }
+            else
+            {
+                <div class="alert alert-info text-center">
+                    <i class="bi bi-info-circle"></i> 
+                    Нет данных для построения. Заполните поле <b>"Тип данных"</b> и нажмите "Построить".
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+@section Scripts {
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var rawData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model ?? new List<Tsk3.Models.DataBaseItem>()));
+            
+            if (!rawData || rawData.length === 0) return;
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('datetime', 'Время');
+            data.addColumn('number', '@Html.Raw(ViewBag.DataType ?? "Значение")');
+
+            var rows = [];
+            for (var i = 0; i < rawData.length; i++) {
+                var item = rawData[i];
+                var valStr = item.Value ? item.Value.toString().replace(',', '.') : "0";
+                var val = parseFloat(valStr);
+                var date = new Date(item.Date);
+                rows.push([date, val]);
+            }
+
+            data.addRows(rows);
+
+            var options = {
+                title: 'Динамика: @Html.Raw(ViewBag.SensorName ?? "")',
+                curveType: 'function',
+                legend: { position: 'bottom' },
+                colors: ['#2a5298'],
+                hAxis: { title: 'Время', format: 'dd.MM HH:mm', gridlines: { count: 8 } },
+                vAxis: { title: 'Значение' },
+                chartArea: { width: '85%', height: '70%' },
+                pointSize: 4
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+}

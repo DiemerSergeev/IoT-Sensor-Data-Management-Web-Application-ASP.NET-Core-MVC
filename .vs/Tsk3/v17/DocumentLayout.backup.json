@@ -1,0 +1,261 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Linux_Labs\\Tsk3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|d:\\linux_labs\\tsk3\\tsk3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|solutionrelative:tsk3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|d:\\linux_labs\\tsk3\\tsk3\\views\\database\\showchart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|solutionrelative:tsk3\\views\\database\\showchart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|d:\\linux_labs\\tsk3\\tsk3\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|solutionrelative:tsk3\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|d:\\linux_labs\\tsk3\\tsk3\\models\\databasemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|solutionrelative:tsk3\\models\\databasemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|d:\\linux_labs\\tsk3\\tsk3\\models\\databaseitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|solutionrelative:tsk3\\models\\databaseitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|d:\\linux_labs\\tsk3\\tsk3\\models\\connectionparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|solutionrelative:tsk3\\models\\connectionparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|d:\\linux_labs\\tsk3\\tsk3\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|solutionrelative:tsk3\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|d:\\linux_labs\\tsk3\\tsk3\\controllers\\databasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|solutionrelative:tsk3\\controllers\\databasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|d:\\linux_labs\\tsk3\\tsk3\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|solutionrelative:tsk3\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|d:\\linux_labs\\tsk3\\tsk3\\views\\database\\showdatatable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|solutionrelative:tsk3\\views\\database\\showdatatable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|d:\\linux_labs\\tsk3\\tsk3\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|solutionrelative:tsk3\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|d:\\linux_labs\\tsk3\\tsk3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|solutionrelative:tsk3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|d:\\linux_labs\\tsk3\\tsk3\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|solutionrelative:tsk3\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|d:\\linux_labs\\tsk3\\tsk3\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9D741905-A1DC-4135-BEB2-E719DD244088}|Tsk3\\Tsk3.csproj|solutionrelative:tsk3\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 100,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Tsk3\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Tsk3\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T20:39:59.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Tsk3\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Tsk3\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-14T15:08:56.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Tsk3\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Tsk3\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T15:07:39.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\Linux_Labs\\Tsk3\\Tsk3\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Tsk3\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\Linux_Labs\\Tsk3\\Tsk3\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Tsk3\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-11T19:58:06.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShowChart.cshtml",
+              "DocumentMoniker": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Views\\DataBase\\ShowChart.cshtml",
+              "RelativeDocumentMoniker": "Tsk3\\Views\\DataBase\\ShowChart.cshtml",
+              "ToolTip": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Views\\DataBase\\ShowChart.cshtml",
+              "RelativeToolTip": "Tsk3\\Views\\DataBase\\ShowChart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-10T20:26:53.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Program.cs",
+              "RelativeDocumentMoniker": "Tsk3\\Program.cs",
+              "ToolTip": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Program.cs",
+              "RelativeToolTip": "Tsk3\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T18:40:47.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ShowDataTable.cshtml",
+              "DocumentMoniker": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Views\\DataBase\\ShowDataTable.cshtml",
+              "RelativeDocumentMoniker": "Tsk3\\Views\\DataBase\\ShowDataTable.cshtml",
+              "ToolTip": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Views\\DataBase\\ShowDataTable.cshtml",
+              "RelativeToolTip": "Tsk3\\Views\\DataBase\\ShowDataTable.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAHUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T20:28:37.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Linux_Labs\\Tsk3\\Tsk3\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Tsk3\\appsettings.Development.json",
+              "ToolTip": "D:\\Linux_Labs\\Tsk3\\Tsk3\\appsettings.Development.json",
+              "RelativeToolTip": "Tsk3\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-09T20:03:48.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConnectionParameters.cs",
+              "DocumentMoniker": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Models\\ConnectionParameters.cs",
+              "RelativeDocumentMoniker": "Tsk3\\Models\\ConnectionParameters.cs",
+              "ToolTip": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Models\\ConnectionParameters.cs",
+              "RelativeToolTip": "Tsk3\\Models\\ConnectionParameters.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T19:10:00.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataBaseItem.cs",
+              "DocumentMoniker": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Models\\DataBaseItem.cs",
+              "RelativeDocumentMoniker": "Tsk3\\Models\\DataBaseItem.cs",
+              "ToolTip": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Models\\DataBaseItem.cs",
+              "RelativeToolTip": "Tsk3\\Models\\DataBaseItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T19:06:17.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Tsk3\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Tsk3\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T18:54:42.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Tsk3\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Tsk3\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T18:41:36.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataBaseModel.cs",
+              "DocumentMoniker": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Models\\DataBaseModel.cs",
+              "RelativeDocumentMoniker": "Tsk3\\Models\\DataBaseModel.cs",
+              "ToolTip": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Models\\DataBaseModel.cs",
+              "RelativeToolTip": "Tsk3\\Models\\DataBaseModel.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAkwEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T18:40:15.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DataBaseController.cs",
+              "DocumentMoniker": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Controllers\\DataBaseController.cs",
+              "RelativeDocumentMoniker": "Tsk3\\Controllers\\DataBaseController.cs",
+              "ToolTip": "D:\\Linux_Labs\\Tsk3\\Tsk3\\Controllers\\DataBaseController.cs",
+              "RelativeToolTip": "Tsk3\\Controllers\\DataBaseController.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAwwG8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T18:40:01.659Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
