@@ -2,6 +2,18 @@
 
 ASP.NET Core MVC web application for browsing, charting and exporting sensor measurements that an ESP32-based device stores in a MySQL database. Academic project covering the path from sensor data to a remotely accessible web interface.
 
+## Screenshots
+
+![Dashboard with the number of records received from the ESP32 sensors](docs/dashboard.png)
+
+## Data Source
+
+The ESP32 reads a BMP180 sensor, connects to MySQL over Wi-Fi and inserts a temperature row and a pressure row on every cycle (serial monitor below). The rows then appear in `SENSOR_DATA_TABLE` and are what the web application reads.
+
+![ESP32 serial log: Wi-Fi and SQL connection, BMP180 readings, INSERT statements](docs/esp32-serial-log.png)
+
+![Rows written by the ESP32 in SENSOR_DATA_TABLE (MySQL console)](docs/database-rows.png)
+
 ## Features
 
 - **Dashboard:** total number of records received from the sensors.
