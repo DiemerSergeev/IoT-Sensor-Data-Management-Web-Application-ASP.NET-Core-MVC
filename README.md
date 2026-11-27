@@ -98,3 +98,35 @@ Remote Browser Access
 Academic project.
 
 The project demonstrates an end-to-end workflow connecting an embedded IoT device with a database-driven web application, from sensor data acquisition to remote visualization and export.
+
+## Repository Structure
+
+```text
+Tsk3/
+  Tsk3.sln
+  Tsk3/
+    Controllers/   MVC controllers (database views, filtering, export)
+    Models/        Connection parameters, database access, sensor record model
+    Views/         Razor views (dashboard, table, chart)
+    wwwroot/       Static files
+    Program.cs     Application startup and database configuration
+```
+
+## Configuration and Run
+
+The database connection is read from the `Database` section of `appsettings.json` (placeholders by default). Real credentials are not stored in the repository; set them with environment variables:
+
+```text
+Database__Server=<mysql host>
+Database__Port=3306
+Database__Name=SENSOR_DB
+Database__Table=SENSOR_DATA_TABLE
+Database__User=<read-only user>
+Database__Password=<password>
+```
+
+Run from the `Tsk3/Tsk3` folder with .NET 8:
+
+```text
+dotnet run
+```

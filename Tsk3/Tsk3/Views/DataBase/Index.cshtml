@@ -1,0 +1,43 @@
+﻿@model Int32
+@{
+    ViewData["Title"] = "Обзор Базы Данных";
+}
+
+<div class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 70vh;">
+
+    <!-- Заголовок страницы (белый, так как фон сайта темный) -->
+    <h1 class="display-4 text-white mb-4 text-center" style="font-weight: 700;">
+        IoT Database Dashboard
+    </h1>
+
+    <!-- Белая карточка по центру -->
+    <div class="card p-5 shadow text-center" style="max-width: 600px; width: 100%;">
+        <div class="card-body">
+
+            <h4 class="card-title text-muted mb-3">Состояние базы данных</h4>
+
+            <!-- Отображение количества записей крупно -->
+            <h1 class="display-1 text-primary fw-bold mb-3">
+                @Model
+            </h1>
+
+            <p class="text-muted mb-5">
+                Записей получено от датчиков ESP32
+            </p>
+
+            <!-- Кнопки действий -->
+            <div class="d-grid gap-3">
+                <!-- Кнопка перехода к таблице -->
+                <a asp-controller="DataBase" asp-action="ShowDataTable" class="btn btn-primary btn-lg">
+                    Просмотр данных (Таблица)
+                </a>
+
+                <!-- Кнопка перехода к графикам (сразу, без лишних меню) -->
+                <a asp-controller="DataBase" asp-action="ShowChart" class="btn btn-outline-primary btn-lg">
+                    Визуализация (Графики)
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+/* Основной фон и шрифт */
+body {
+    /* Технологичный темно-синий градиент */
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    /* Если хотите картинку на фон, раскомментируйте строку ниже: */
+    /* background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed; background-size: cover; */
+
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #fff; /* Белый текст заголовков на темном фоне */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Легкая тень текста */
+}
+
+/* Навигационная панель (верхнее меню) */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.navbar-brand, .nav-link {
+    color: #2a5298 !important;
+    font-weight: 600;
+}
+
+/* Карточки (контейнеры для форм и таблиц) */
+.card {
+    border: none;
+    border-radius: 15px; /* Закругленные углы */
+    background-color: rgba(255, 255, 255, 0.92); /* Полупрозрачный белый */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Красивая тень */
+    margin-bottom: 30px;
+    transition: transform 0.2s;
+}
+
+    /* Эффект при наведении на карточку */
+    .card:hover {
+        transform: translateY(-5px); /* Легкое всплытие */
+    }
+
+/* Кнопки */
+.btn-primary {
+    background-color: #2a5298;
+    border-color: #2a5298;
+    border-radius: 50px; /* Овальные кнопки */
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: #1e3c72;
+        box-shadow: 0 5px 15px rgba(30, 60, 114, 0.4);
+    }
+
+.btn-secondary {
+    border-radius: 50px;
+}
+
+/* Поля ввода */
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+    padding: 10px 15px;
+}
+
+    .form-control:focus {
+        box-shadow: 0 0 0 0.2rem rgba(42, 82, 152, 0.25);
+        border-color: #2a5298;
+    }
+
+/* Таблица */
+.table {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden; /* Чтобы углы таблицы тоже были круглыми */
+}
+
+    .table thead th {
+        background-color: #2a5298;
+        color: white;
+        border: none;
+    }

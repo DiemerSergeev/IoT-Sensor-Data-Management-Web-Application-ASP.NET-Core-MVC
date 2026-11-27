@@ -1,0 +1,125 @@
+﻿@model IEnumerable<Tsk3.Models.DataBaseItem>
+@{
+    ViewData["Title"] = "График данных";
+}
+
+<h2 class="text-center text-white my-4">Визуализация данных</h2>
+
+<div class="container">
+    <div class="card shadow p-4 mb-5">
+        <div class="card-body">
+            
+            <h5 class="card-title text-muted mb-3">Параметры графика</h5>
+
+            <form method="get" asp-action="ShowChart">
+                <div class="row g-3 align-items-end">
+                    
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold small">Датчик</label>
+                        <input type="text" name="sensorName" class="form-control" 
+                               value="@ViewBag.SensorName" placeholder="Например: BMP180" />
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold small">Тип данных</label>
+                        <input type="text" name="dataType" class="form-control" 
+                               value="@ViewBag.DataType" placeholder="Например: Temperature" required />
+                    </div>
+
+                    <div class="col-md-2">
+                        <label class="form-label fw-bold small">Позиция</label>
+                        <input type="text" name="position" class="form-control" 
+                               value="@ViewBag.Position" placeholder="№" />
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                        <label class="form-label fw-bold small">С (дата)</label>
+
+                        <!-- Используем value="@ViewBag.StartDate" -->
+                        <!-- НЕ ИСПОЛЬЗУЙТЕ asp-for="startDate" здесь! -->
+                        <input type="datetime-local"
+                               name="startDate"
+                               class="form-control"
+                               value="@ViewBag.StartDate"
+                               style="font-size: 0.9rem;" />
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                        <label class="form-label fw-bold small">По (дата)</label>
+
+                        <input type="datetime-local"
+                               name="endDate"
+                               class="form-control"
+                               value="@ViewBag.EndDate"
+                               style="font-size: 0.9rem;" />
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-12 text-end">
+                        <a asp-action="ShowChart" class="btn btn-secondary btn-sm me-2">Сброс</a>
+                        <button type="submit" class="btn btn-primary px-4">Построить</button>
+                    </div>
+                </div>
+            </form>
+
+            <hr class="my-4" />
+
+            @if (Model != null && Model.Any() && !string.IsNullOrEmpty(ViewBag.DataType as string))
+            {
+                <div id="chart_div" style="width: 100%; height: 500px;"></div>
+            }
+            else
+            {
+                <div class="alert alert-info text-center">
+                    <i class="bi bi-info-circle"></i> 
+                    Нет данных для построения. Заполните поле <b>"Тип данных"</b> и нажмите "Построить".
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+@section Scripts {
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var rawData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model ?? new List<Tsk3.Models.DataBaseItem>()));
+            
+            if (!rawData || rawData.length === 0) return;
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('datetime', 'Время');
+            data.addColumn('number', '@Html.Raw(ViewBag.DataType ?? "Значение")');
+
+            var rows = [];
+            for (var i = 0; i < rawData.length; i++) {
+                var item = rawData[i];
+                var valStr = item.Value ? item.Value.toString().replace(',', '.') : "0";
+                var val = parseFloat(valStr);
+                var date = new Date(item.Date);
+                rows.push([date, val]);
+            }
+
+            data.addRows(rows);
+
+            var options = {
+                title: 'Динамика: @Html.Raw(ViewBag.SensorName ?? "")',
+                curveType: 'function',
+                legend: { position: 'bottom' },
+                colors: ['#2a5298'],
+                hAxis: { title: 'Время', format: 'dd.MM HH:mm', gridlines: { count: 8 } },
+                vAxis: { title: 'Значение' },
+                chartArea: { width: '85%', height: '70%' },
+                pointSize: 4
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+}

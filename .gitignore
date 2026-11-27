@@ -1,0 +1,13 @@
+# Visual Studio / .NET build output
+.vs/
+bin/
+obj/
+*.user
+*.suo
+
+# Local publish profiles (contain target machine addresses)
+**/Properties/PublishProfiles/
+
+# Local configuration with real credentials
+appsettings.Local.json
+appsettings.Production.json

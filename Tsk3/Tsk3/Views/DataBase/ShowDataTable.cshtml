@@ -1,0 +1,106 @@
+﻿@model IEnumerable<Tsk3.Models.DataBaseItem>
+@{
+    ViewData["Title"] = "Архив показаний";
+}
+
+<h2 class="text-center text-white my-4">Архив показаний</h2>
+
+<div class="container">
+    
+    <!-- Фильтр -->
+    <div class="card shadow p-4 mb-4">
+        <div class="card-body">
+            <h5 class="card-title text-muted mb-3">Фильтр</h5>
+            
+            <form method="get" asp-action="ShowDataTable">
+                <div class="row g-3 align-items-end">
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold small">Датчик</label>
+                        <input type="text" name="sensorName" class="form-control" 
+                               value="@ViewBag.SensorName" placeholder="Название" />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold small">Тип данных</label>
+                        <input type="text" name="dataType" class="form-control" 
+                               value="@ViewBag.DataType" placeholder="Тип" />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label fw-bold small">Позиция</label>
+                        <input type="text" name="position" class="form-control" 
+                               value="@ViewBag.Position" placeholder="№" />
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <label class="form-label fw-bold small">С (дата)</label>
+
+                        <!-- Используем value="@ViewBag.StartDate" -->
+                        <!-- НЕ ИСПОЛЬЗУЙТЕ asp-for="startDate" здесь! -->
+                        <input type="datetime-local"
+                               name="startDate"
+                               class="form-control"
+                               value="@ViewBag.StartDate"
+                               style="font-size: 0.9rem;" />
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                        <label class="form-label fw-bold small">По (дата)</label>
+
+                        <input type="datetime-local"
+                               name="endDate"
+                               class="form-control"
+                               value="@ViewBag.EndDate"
+                               style="font-size: 0.9rem;" />
+                    </div>
+                </div>
+                
+                <div class="row mt-3">
+                    <div class="col-12 text-end">
+                        <a asp-action="ShowDataTable" class="btn btn-secondary btn-sm me-2">Сброс</a>
+                        <button type="submit" class="btn btn-primary px-4">Найти</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Таблица -->
+    <div class="card shadow mb-5">
+        <div class="card-body p-0">
+            @if (Model != null && Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover mb-0">
+                        <thead style="background-color: #2a5298; color: white;">
+                            <tr>
+                                <th class="py-3 px-4">ID</th>
+                                <th class="py-3">Датчик</th>
+                                <th class="py-3">Тип</th>
+                                <th class="py-3">Поз.</th>
+                                <th class="py-3">Значение</th>
+                                <th class="py-3">Дата</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="px-4">@item.Id</td>
+                                    <td>@item.SensorName</td>
+                                    <td><span class="badge bg-info text-dark">@item.DataType</span></td>
+                                    <td>@item.Position</td>
+                                    <td class="fw-bold">@item.Value</td>
+                                    <td>@item.Date</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="p-5 text-center text-muted">
+                    <p>Данные не найдены.</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
