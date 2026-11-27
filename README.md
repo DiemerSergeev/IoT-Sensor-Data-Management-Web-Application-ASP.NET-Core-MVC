@@ -1,103 +1,44 @@
-# IoT Sensor Data Management System
+# IoT Sensor Data Management Web Application
 
-An IoT project integrating an ESP32-based device, a database, and an ASP.NET Core MVC web application for sensor data collection, storage, visualization, filtering, and export.
+ASP.NET Core MVC web application for browsing, charting and exporting sensor measurements that an ESP32-based device stores in a MySQL database. Academic project covering the path from sensor data to a remotely accessible web interface.
 
-The system demonstrates the integration of embedded devices, database management, web development, and Linux-based deployment in a single end-to-end project.
+## Features
 
-## Overview
+- **Dashboard:** total number of records received from the sensors.
+- **Data table:** archive of readings with filters by sensor name, data type, position and date range, newest first.
+- **Time-series chart:** line chart of the selected measurement type (for example, temperature) over a chosen interval, drawn with Google Charts.
+- **Export:** the current filtered selection (or the whole table) as an Excel `.xlsx` file (ClosedXML) or as XML.
+- **Remote access:** the application ran on a Linux virtual machine behind a web server and was published through a Cloudflare Tunnel.
 
-The project consists of three main components:
-
-- **ESP32:** Collects sensor data and transmits records for storage.
-- **Database (SENSOR_DB):** Stores sensor records for subsequent retrieval and analysis.
-- **ASP.NET Core MVC Web Application:** Provides a web interface for browsing, filtering, visualizing, and exporting the collected data.
-
-The application was deployed on a Linux virtual machine and configured for remote access using Cloudflare Tunnel.
-
-## Key Features
-
-### IoT Data Acquisition
-- Integrated an ESP32-based device into the data collection workflow.
-- Supported the addition of sensor records to the database.
-- Enabled access to collected measurements through the web application.
-
-### Database Management
-- Implemented database-backed retrieval and presentation of sensor records.
-- Supported viewing complete datasets and filtered subsets.
-- Organized measurement data for further analysis and visualization.
-
-### Web Application
-- Developed an ASP.NET Core MVC web application.
-- Implemented tabular data presentation and navigation between application views.
-- Added user-selectable filters for retrieving relevant records.
-- Included a student information view.
-
-### Data Visualization
-- Implemented time-series graphs for exploring sensor measurements.
-- Enabled users to select measurement types, positions, and time intervals.
-- Provided a visual representation of sensor data over time.
-
-### Data Export
-- Implemented data export to Excel-compatible formats and XML.
-- Supported exporting complete or filtered datasets for further processing.
-
-### Deployment and Remote Access
-- Deployed the web application on a Linux virtual machine.
-- Configured a web server and verified access over the local network.
-- Set up Cloudflare Tunnel to provide remote access to the application.
-
-## System Architecture
+## Architecture
 
 ```text
-ESP32
-  |
-  | Sensor data
-  v
-SENSOR_DB Database
-  ^
-  | Data retrieval
-  |
-ASP.NET Core MVC
-  |
-  +-- Tabular Data & Filtering
-  +-- Time-Series Visualization
-  +-- Excel-Compatible / XML Export
-  |
-  v
-Web Server on Linux VM
-  |
-  v
-Cloudflare Tunnel
-  |
-  v
-Remote Browser Access
+ESP32 (sensors) --> MySQL database --> ASP.NET Core MVC --> browser
+                                         |-- table + filters
+                                         |-- chart
+                                         |-- Excel / XML export
 ```
 
-## Technologies Used
+The ESP32 firmware is not part of this repository. Embedded work is collected in [Embedded-Software-Projects](https://github.com/DiemerSergeev/Embedded-Software-Projects).
 
-- **Embedded / IoT:** ESP32
-- **Backend:** C#, ASP.NET Core MVC
-- **Database:** SENSOR_DB
-- **Data Visualization:** Time-series charts
-- **Data Formats:** Excel-compatible files, XML
-- **Operating System:** Linux
-- **Networking & Deployment:** Virtual machine, web server, Cloudflare Tunnel
+## Database
 
-## Skills Demonstrated
+The application reads one table, by default `SENSOR_DATA_TABLE` in the `SENSOR_DB` schema, with these columns:
 
-- Embedded systems and IoT integration
-- Database-backed application development
-- C# and ASP.NET Core MVC
-- Data filtering, visualization, and export
-- Linux deployment and server configuration
-- Network access and remote application deployment
-- Integration of hardware, software, and data storage
+| Column | Content |
+|--------|---------|
+| `Id` | record number |
+| `SensorName` | sensor name (for example, BMP180) |
+| `DataType` | measured quantity (for example, Temperature) |
+| `Position` | sensor position number |
+| `Value` | measured value |
+| `Date` | time of the measurement |
 
-## Project Type
+Filter values are passed to MySQL as query parameters.
 
-Academic project.
+## Tech Stack
 
-The project demonstrates an end-to-end workflow connecting an embedded IoT device with a database-driven web application, from sensor data acquisition to remote visualization and export.
+C#, ASP.NET Core MVC (.NET 8), MySql.Data, ClosedXML, Razor views, Bootstrap, Google Charts. ESP32 as the data source; Linux VM and Cloudflare Tunnel for deployment.
 
 ## Repository Structure
 
@@ -105,16 +46,16 @@ The project demonstrates an end-to-end workflow connecting an embedded IoT devic
 Tsk3/
   Tsk3.sln
   Tsk3/
-    Controllers/   MVC controllers (database views, filtering, export)
-    Models/        Connection parameters, database access, sensor record model
-    Views/         Razor views (dashboard, table, chart)
-    wwwroot/       Static files
-    Program.cs     Application startup and database configuration
+    Controllers/   DataBaseController (table, chart, export), HomeController
+    Models/        ConnectionParameters, DataBaseModel (queries), DataBaseItem
+    Views/         Razor views: dashboard, table, chart, shared layout
+    wwwroot/       Static files and icons
+    Program.cs     Startup and database configuration
 ```
 
 ## Configuration and Run
 
-The database connection is read from the `Database` section of `appsettings.json` (placeholders by default). Real credentials are not stored in the repository; set them with environment variables:
+Connection settings are read from the `Database` section of `appsettings.json`. The file contains empty defaults; real values are set with environment variables and are not stored in the repository:
 
 ```text
 Database__Server=<mysql host>
@@ -125,8 +66,10 @@ Database__User=<read-only user>
 Database__Password=<password>
 ```
 
-Run from the `Tsk3/Tsk3` folder with .NET 8:
+Run from the `Tsk3/Tsk3` folder with the .NET 8 SDK:
 
 ```text
 dotnet run
 ```
+
+The chart page loads Google Charts from a CDN, so it needs internet access in the browser.
